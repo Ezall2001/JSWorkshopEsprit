@@ -1,0 +1,214 @@
+/** @format */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #131220;
+  color: #ebeeef;
+}
+body .wrapper {
+  width: 100%;
+  padding: 2rem 4rem;
+}
+
+.formTitle {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ebeeef;
+  margin-bottom: 0;
+}
+.formTitle i {
+  color: #a788ff;
+  margin-right: 1rem;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+form .responsibleForm,
+form .clubForm {
+  background-color: #1a192c;
+  padding: 2rem 4rem;
+  border-radius: 20px;
+  width: 37vw;
+  min-width: 510.6px;
+  margin: 3rem 4rem;
+}
+form .responsibleForm:hover,
+form .clubForm:hover {
+  transition: background-color 0.3s ease-in, transform 0.2s ease-in;
+  background-color: #8459ff;
+  transform: scale(1.1);
+}
+form .responsibleForm:hover .actions *,
+form .clubForm:hover .actions * {
+  background-color: #5837b6;
+}
+form .responsibleForm:hover .actions *:hover,
+form .clubForm:hover .actions *:hover {
+  background-color: white;
+  color: #8459ff;
+}
+form .responsibleForm:hover input[type=checkbox] + label,
+form .responsibleForm:hover input[type=radio] + label,
+form .clubForm:hover input[type=checkbox] + label,
+form .clubForm:hover input[type=radio] + label {
+  color: #e4e4e4;
+}
+
+.inputWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+input:not(input[type=checkbox], input[type=radio], input[type=submit]),
+select {
+  margin-left: 1.8rem;
+  width: 50%;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  text-align: center;
+  background-color: #1f1f32;
+  border: none;
+  border-radius: 3px;
+  color: #c6c9cd;
+}
+input:not(input[type=checkbox], input[type=radio], input[type=submit]):focus,
+select:focus {
+  outline: 1px solid #6d4cd2;
+}
+
+input:not(input[type=checkbox], input[type=radio], input[type=submit])::placeholder,
+select::placeholder {
+  color: #646475;
+}
+
+input[type=checkbox] + label,
+input[type=radio] + label {
+  user-select: none;
+  color: #a788ff;
+}
+
+.checkboxWrapper,
+.radioWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.checkboxWrapper .inputWrapper,
+.radioWrapper .inputWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+.checkboxWrapper h4,
+.radioWrapper h4 {
+  width: 100%;
+  margin: 1rem 0rem 0.5rem 0rem;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.checkboxWrapper label,
+.radioWrapper label {
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+.checkboxWrapper textarea {
+  outline: none;
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  transition: width 0.3s ease-out, height 0.3s ease-out, visibility 0.1s linear 0.3s;
+}
+.checkboxWrapper textarea.active {
+  visibility: visible;
+  transition: width 0.3s ease-out, height 0.3s ease-out;
+  max-width: 200px;
+  width: 20vw;
+  height: 50px;
+}
+
+.radioWrapper {
+  align-items: baseline;
+}
+.radioWrapper h4 {
+  width: auto;
+  margin-right: 1rem;
+}
+
+.actions {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.actions input,
+.actions button {
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.048);
+  border: none;
+  color: white;
+  padding: 0.6rem 1.7rem;
+  font-size: 1rem;
+  border-radius: 2px;
+}
+.actions input:hover,
+.actions button:hover {
+  background-color: #8459ff;
+}
+.actions button {
+  margin-left: 1rem;
+}
+
+.message {
+  font-size: 1.1rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 35vw;
+  max-width: 500px;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  background-color: transparent;
+  opacity: 0;
+  transform: translateY(20vh);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in, background-color 0.3s ease-in;
+}
+.message i {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+}
+.message.activeError {
+  transition: transform 0.5s ease-out, opacity 0.3s ease-out, background-color 0.3s ease-out;
+  opacity: 1;
+  transform: translateY(0);
+  background-color: #df4e4e;
+}
+.message.activeSuccess {
+  transition: transform 0.5s ease-out, opacity 0.3s ease-out, background-color 0.3s ease-out;
+  opacity: 1;
+  transform: translateY(0);
+  background-color: #2fad73;
+}
+
+/*# sourceMappingURL=club.css.map */

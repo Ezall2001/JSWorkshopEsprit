@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/22e2495c8c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./club.css">
+    <script src="./index.js" type="module" defer></script>
+    <title>Club</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1 class="formTitle"><i class="fa-solid fa-circle-plus"></i>ADD CLUB</h1>
+
+
+      <form method="post">
+
+        <div class="clubForm">
+          <h2>Club</h2>
+
+          <div class="inputWrapper">
+            <label for="clubName">Club Name: </label>
+            <input type="text" name="clubName" id="clubName">
+          </div>
+
+          <div class="inputWrapper">
+            <label for="foundationDate">Foundation Date: </label>
+            <input type="date" name="foundationDate" id="foundationDate">
+          </div>
+
+          <div class="inputWrapper">
+            <label for="membersNum">Members Count: </label>
+            <input type="number" min="10" max="100" value="10" name="membersNum" id="membersNum">
+          </div>
+
+          <div class="inputWrapper">
+            <label for="categories">Categories: </label>
+            <select name="categories" id="categories">
+              <option value="IT">IT</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Mechanics">Mechanics</option>
+              <option value="Civil Engineering">Civil Engineering</option>
+            </select>
+          </div>
+
+          <div class="checkboxWrapper">
+            <h4>Type Of Activities: </h4>
+
+            <div class="inputWrapper">
+              <input type="checkbox" name="activities-seminars" id="activities-seminars" value="seminars">
+              <label for="activities-seminars">Seminars</label>
+            </div>
+
+            <div class="inputWrapper">
+              <input type="checkbox" name="activities-training" id="activities-training" value="training">
+              <label for="activities-training">Training Course</label>
+            </div>
+
+            <div class="inputWrapper">
+              <input type="checkbox" name="activities-events" id="activities-events" value="events">
+              <label for="activities-events">Events</label>
+            </div>
+
+            <div class="inputWrapper">
+              <input type="checkbox" name="activities-teamBuilding" id="activities-teamBuilding" value="teamBuilding">
+              <label for="activities-teamBuilding">Team Building</label>
+            </div>
+
+            <div class="inputWrapper">
+              <input type="checkbox" name="activities-others" id="activities-others" value="others">
+              <label for="activities-others">Others</label>
+              <textarea style=""></textarea>
+            </div>
+
+          </div>
+
+          <div class="radioWrapper">
+            <h4>Adhesion: </h4>
+
+            <div class="inputWrapper">
+              <input type="radio" name="adhesion" id="open" value="open" checked>
+              <label for="open">Open</label>
+            </div>
+
+            <div class="inputWrapper">
+              <input type="radio" name="adhesion" id="closed" value="closed">
+              <label for="closed">Closed</label>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="responsibleForm formActive">
+          <h2>Club Manager</h2>
+
+          <div class="inputWrapper">
+            <label for="lname">Last Name: </label>
+            <input type="text" name="lname" id="lname">
+          </div>
+
+          <div class="inputWrapper">
+            <label for="fname">First Name: </label>
+            <input type="text" name="fname" id="fname">
+          </div>
+
+          <div class="inputWrapper">
+            <label for="email">Email: </label>
+            <input type="email" name="email" placeholder="example@esprit.tn">
+          </div>
+
+          <div class="inputWrapper">
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password">
+          </div>
+
+          <div class="inputWrapper">
+            <label for="confirmPassword">Confirm Password: </label>
+            <input type="password" name="confirmPassword" id="confirmPassword">
+          </div>
+
+          <div class="actions">
+            <input type="submit" name="submit">
+            <button type="reset">Reset</button>
+          </div>
+        </div>
+
+        <div class="message">
+        </div>
+
+
+      </form>
+
+    </div>
+
+  </body>
+
+</html>
